@@ -11,16 +11,16 @@
 
     <style>
         :root {
-            --bg-color: #080a10; /* خلفية داكنة مائلة للكحلي العسكري */
-            --card-bg: #0d121c; /* خلفية الكروت متناسقة مع الدرع الخارجي */
-            --primary-green: #0a4d29; /* الأخضر العميق للقطاع */
-            --light-green: #0e7e43; /* الأخضر الرسمي المأخوذ من الشعار */
-            --accent-green: #f9df1d; /* اللون الذهبي/الأصفر الملكي من الشعار */
+            --bg-color: #050806;
+            --card-bg: #0b120e;
+            --primary-green: #0d331e;
+            --light-green: #125430;
+            --accent-green: #2ecc71;
             --text-main: #ffffff;
-            --text-muted: #9bb0a5;
-            --border-color: #1a2336; /* إطار متناسق مع كحلي الشعار */
+            --text-muted: #96a79e;
+            --border-color: #112218;
             --warning-red: #e74c3c;
-            --glow-color: rgba(249, 223, 29, 0.15); /* توهج ذهبي خفيف وفخم */
+            --glow-color: rgba(46, 204, 113, 0.25);
         }
 
         * {
@@ -44,7 +44,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #05070b 0%, #0d121c 100%);
+            background: linear-gradient(135deg, #030504 0%, #0b120e 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -68,7 +68,7 @@
             font-weight: 700;
             margin-bottom: 20px;
             color: var(--text-main);
-            text-shadow: 0 0 15px rgba(249, 223, 29, 0.2);
+            text-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
         }
 
         .welcome-desc {
@@ -100,19 +100,19 @@
             font-weight: 650;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(10, 77, 41, 0.4);
+            box-shadow: 0 5px 20px rgba(21, 87, 52, 0.4);
             transition: all 0.3s ease;
         }
 
         .btn-general:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(14, 126, 67, 0.4);
+            box-shadow: 0 8px 25px var(--glow-color);
             border-color: var(--accent-green);
         }
 
         /* لوحة التوقيت الحي المطور */
         .live-ticker-panel {
-            background: linear-gradient(90deg, #090e17, #131b29);
+            background: linear-gradient(90deg, #090f0c, #111e17);
             border-bottom: 2px solid var(--border-color);
             padding: 15px 20px;
             display: flex;
@@ -185,10 +185,10 @@
         .section-title {
             font-size: 1.8rem;
             margin-bottom: 25px;
-            border-right: 5px solid var(--light-green);
+            border-right: 5px solid var(--accent-green);
             padding-right: 15px;
             color: #e2e8f0;
-            text-shadow: 0 0 15px rgba(14, 126, 67, 0.15);
+            text-shadow: 0 0 15px rgba(46, 204, 113, 0.15);
         }
 
         .grid-container {
@@ -208,7 +208,7 @@
 
         .card:hover {
             border-color: var(--light-green);
-            box-shadow: 0 5px 15px rgba(14, 126, 67, 0.1);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.08);
         }
 
         /* تأثير الحركة المطور لقسم القيادة وقسم الانجازات */
@@ -220,7 +220,7 @@
             padding: 18px 20px;
             border-radius: 8px;
             margin-bottom: 15px;
-            border-right: 4px solid var(--light-green);
+            border-right: 4px solid var(--accent-green);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -228,9 +228,9 @@
 
         .leader-item:hover, .achievement-item:hover {
             transform: translateX(-8px);
-            background: linear-gradient(90deg, rgba(14, 126, 67, 0.15), rgba(13, 18, 28, 0.4));
-            border-right-color: var(--accent-green);
-            box-shadow: 0 5px 15px rgba(14, 126, 67, 0.15);
+            background: linear-gradient(90deg, rgba(22, 100, 54, 0.15), rgba(11, 18, 14, 0.4));
+            border-right-color: #ffffff;
+            box-shadow: 0 5px 15px var(--glow-color);
         }
 
         .discord-tag {
@@ -241,6 +241,9 @@
             font-size: 0.85rem;
             font-family: monospace;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
         /* روابط ولوائح القوات الخاصة */
@@ -261,7 +264,7 @@
 
         .link-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(14, 126, 67, 0.3);
+            box-shadow: 0 4px 15px rgba(46, 204, 113, 0.25);
             border-color: var(--accent-green);
         }
 
@@ -285,8 +288,8 @@
             position: absolute;
             right: 0;
             top: 2px;
-            background-color: var(--primary-green);
-            color: var(--accent-green);
+            background-color: var(--light-green);
+            color: white;
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -295,7 +298,7 @@
             justify-content: center;
             font-weight: bold;
             font-size: 0.9rem;
-            border: 1px solid var(--light-green);
+            border: 1px solid var(--accent-green);
         }
 
         /* الأنظمة الفرعية للرصد والتحضير */
@@ -331,6 +334,7 @@
 </head>
 <body>
 
+    <!-- الشاشة الأولى: الترحيب المطور المحدث بالكامل -->
     <div id="welcome-screen" class="screen-overlay">
         <div class="welcome-content">
             <h1 class="welcome-title">القوات الخاصة لأمن الطرق | KR</h1>
@@ -350,6 +354,7 @@
         </div>
     </div>
 
+    <!-- الشاشة الثانية: الترحيب والتعريف الرسمي بالقطاع مع تحديث زر الدخول المطلوب -->
     <div id="intro-screen" class="screen-overlay" style="display: none; opacity: 0;">
         <div class="welcome-content">
             <h1 class="welcome-title" style="color: var(--accent-green);">ترحيب رسمي</h1>
@@ -359,17 +364,19 @@
             <p class="welcome-desc" style="text-align: justify;">
                 القوات الخاصة لأمن الطرق هي إحدى القطاعات الأمنية التابعة لوزارة الداخلية داخل مدينة KR، وتُعنى بحفظ أمن وسلامة الطرق السريعة وتأمين الحركة المرورية وفق أعلى معايير الانضباط والجاهزية الأمنية.
                 <br><br>
-                وتتولى القوات مهام التفتيش الأمني، واستلام ومباشرة الطرق الرئيسية والحيوية مثل طريق الملك فهد، إضافةً إلى تنفيذ عمليات البحث والتفتيش، وضبط المخالفين والمهربين، والتعامل مع الحالات الأمنية والبلاغات الطارئة بكل احترافية وحزم.
+                وتتولى القوات مهام التفتيش الأمني، واستلام ومباشرة الطرق الرئيسية والحيوية مثل طريق الملك فهد، إضافةً إلى تنفيذ عمليات البحث والتفتيش, وضبط المخالفين والمهربين، والتعامل مع الحالات الأمنية والبلاغات الطارئة بكل احترافية وحزم.
                 <br><br>
                 كما تعمل القوات الخاصة لأمن الطرق على تعزيز الأمن والاستقرار، وحماية مستخدمي الطرق، والتصدي لكافة الأنشطة غير النظامية، ضمن منظومة أمنية متكاملة تعتمد على الكفاءة، والانضباط، وسرعة الاستجابة.
             </p>
+            <!-- تعديل الزر بدقة هنا -->
             <button class="btn-general" onclick="enterMainSite()">الدخول الى منصة وتصفح الأنظمة ولوائح</button>
         </div>
     </div>
 
+    <!-- لوحة التوقيت الحي المحدثة بالاسم الجديد المستقر علوياً -->
     <div class="live-ticker-panel" id="ticker-top" style="display: none;">
         <div class="ticker-brand">
-            <span>المنصة الرقمية القوات الخاصة لأمن الطرق | KR</span>
+            <span>المنصة الرقمية للقوات الخاصة لأمن الطرق | KR</span>
         </div>
         <div class="time-date-container">
             <div class="live-clock"><span id="clock-display">00:00:00 م</span></div>
@@ -378,8 +385,10 @@
         </div>
     </div>
 
+    <!-- محتوى الموقع الأساسي المرتب هيدروليكياً -->
     <div class="main-content" id="main-site">
         
+        <!-- القسم الأول: القوانين العامة للقطاع -->
         <section id="general-rules">
             <h2 class="section-title">قوانين القوات الخاصة لأمن الطرق</h2>
             <div class="card">
@@ -392,7 +401,7 @@
                     <li>الكذب أو التزوير في النماذج والمباشرات يُعد تجاوزًا خطيرًا، وتُطبق على مرتكبه العقوبات القصوى.</li>
                     <li>الأوامر الصادرة من قيادة القطاع أو القيادة واجبة التنفيذ فورًا، وأي تأخير أو تهاون يُعتبر عصيانًا.</li>
                     <li>يجب الالتزام بأعلى درجات الاحترام والاحترافية في التعامل مع المدنيين، بما يتوافق مع البروتوكول العسكري المعتمد.</li>
-                    <li>يُمنع استخدام شات القطاع لأي أحاديث جانبية أو مزاح. يُستخدم فقط للتعليمات والتبليغات الرسمية.</li>
+                    <li>يُمنع استخدام شات القطاع لأي أحاديث جانبية أو مزاح. يُخدم فقط للتعليمات والتبليغات الرسمية.</li>
                     <li>يُمنع على المقبولين مبدئيًا التحدث في شات القطاع حتى استلامهم رتبة جندي رسميًا.</li>
                     <li>لا يحق لأي فرد الاعتراض أو طلب تغيير الكود العسكري الخاص به المكلّف بها. التوزيع مسؤولية القيادة وحدها.</li>
                     <li>المشاركة في الحملات الأمنية والتدريبات واجبة على كل فرد.</li>
@@ -404,10 +413,12 @@
             </div>
         </section>
 
+        <!-- القسم الثاني: الأنظمة التخصصية (رصد المخالفات والتحضير) -->
         <section id="specialized-systems">
             <h2 class="section-title">أنظمة العمل والتشغيل الميداني</h2>
             <div class="grid-container">
                 
+                <!-- نظام رصد المخالفات -->
                 <div class="card">
                     <h3 style="margin-bottom:20px; color:#e2e8f0; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">نظام رصد المخالفات الميدانية</h3>
                     
@@ -437,6 +448,7 @@
                     </div>
                 </div>
 
+                <!-- نظام التحضير الميداني -->
                 <div class="card">
                     <h3 style="margin-bottom:20px; color:#e2e8f0; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">نظام التحضير والمباشرات</h3>
                     
@@ -474,35 +486,38 @@
             </div>
         </section>
 
+        <!-- القسم الثالث: أسماء القيادات واللوائح والروابط الرسمية للقطاع -->
         <section id="leadership-and-links">
             <h2 class="section-title">القيادة واللوائح الرسمية</h2>
             <div class="grid-container">
                 
+                <!-- أسماء القيادات -->
                 <div class="card" style="grid-column: span 2;">
-                    <h3 style="margin-bottom:20px; color:var(--accent-green);">أسماء قيادة قطاع أمن الطرق</h3>
+                    <h3 style="margin-bottom:20px; color:var(--accent-green);">أسماء قيادة قطاع القوات الخاصة لأمن الطرق</h3>
                     
                     <div class="leader-item">
                         <div><strong>مسؤول القوات الخاصة لأمن الطرق | R-1:</strong> احمد الشهري</div>
-                        <span class="discord-tag">7n7z</span>
+                        <span class="discord-tag"><i class="fab fa-discord"></i> 7n7z</span>
                     </div>
                     <div class="leader-item">
                         <div><strong>نائب مسؤول القوات الخاصة لأمن الطرق | R-2:</strong> احمد الغامدي</div>
-                        <span class="discord-tag">99qo_</span>
+                        <span class="discord-tag"><i class="fab fa-discord"></i> 99qo_</span>
                     </div>
                     <div class="leader-item">
                         <div><strong>مساعد مسؤول القوات الخاصة لأمن الطرق | R-3:</strong> سطام العتيبي</div>
-                        <span class="discord-tag">qmxe.1</span>
+                        <span class="discord-tag"><i class="fab fa-discord"></i> qmxe.1</span>
                     </div>
                     <div class="leader-item">
                         <div><strong>إدارة القوات الخاصة لأمن الطرق | R-4:</strong> نايف الرشيدي</div>
-                        <span class="discord-tag">am.404</span>
+                        <span class="discord-tag"><i class="fab fa-discord"></i> am.404</span>
                     </div>
                     <div class="leader-item" style="border-right-color: var(--warning-red);">
                         <div><strong>إدارة القوات الخاصة لأمن الطرق:</strong> لا يوجد</div>
-                        <span class="discord-tag" style="background-color: #7f8c8d;">N/A</span>
+                        <span class="discord-tag" style="background-color: #7f8c8d;"><i class="fab fa-discord"></i> N/A</span>
                     </div>
                 </div>
 
+                <!-- اللوائح والمستندات الرسمية -->
                 <div class="card">
                     <h3 style="margin-bottom:20px; color:var(--accent-green);">المستندات واللوائح</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">الروابط والمستندات المعتمدة لأفراد القطاع لمراجعة وضبط آلية العمل الميداني والأنظمة القانونية:</p>
@@ -515,32 +530,34 @@
             </div>
         </section>
 
+        <!-- القسم الرابع: نظام المراجع الرسمية -->
         <section id="references">
             <h2 class="section-title">تسلسل المراجع الرسمية بالقطاع</h2>
             <div class="grid-container">
                 <div class="card">
                     <h4>المرجع الأول</h4>
-                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">إدارة أمن الطرق</p>
+                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">إدارة القوات الخاصة لأمن الطرق</p>
                     <p style="font-size:0.9rem; color:var(--text-muted);">تمثل المرجع التنفيذي الأعلى والمشرف الأساسي. كافة قراراتها واجبة التنفيذ فوراً وبلا نقاش.</p>
                 </div>
                 <div class="card">
                     <h4>المرجع الثاني</h4>
-                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">مساعد مسؤول أمن الطرق</p>
+                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">مساعد مسؤول القوات الخاصة لأمن الطرق</p>
                     <p style="font-size:0.9rem; color:var(--text-muted);">يمتلك كافة الصلاحيات الميدانية والإدارية المباشرة ويُرجع إليه بعد المسؤول والنائب وفي غيابهما.</p>
                 </div>
                 <div class="card">
                     <h4>المرجع الثالث</h4>
-                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">نائب مسؤول أمن الطرق</p>
+                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">نائب مسؤول القوات الخاصة لأمن الطرق</p>
                     <p style="font-size:0.9rem; color:var(--text-muted);">المتابع الأول لسير الكمائن ومباشرة الطرق والمهربين والتأكد من تطبيق العقوبات بالتنسيق مع القائد.</p>
                 </div>
                 <div class="card">
                     <h4>المرجع الرابع</h4>
-                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">مسؤول أمن الطرق</p>
+                    <p style="color:var(--accent-green); font-weight:bold; margin:5px 0;">مسؤول القوات الخاصة لأمن الطرق</p>
                     <p style="font-size:0.9rem; color:var(--text-muted);">المرجع النهائي والأخير للقطاع، وضع في نهاية السلسلة للحد من الإزعاج ويتم التواصل معه في الحالات الطارئة فقط.</p>
                 </div>
             </div>
         </section>
 
+        <!-- القسم الخامس: إنجازات القطاع -->
         <section id="achievements">
             <h2 class="section-title">إنجازات القوات الخاصة لأمن الطرق</h2>
             <div class="grid-container">
@@ -556,7 +573,7 @@
                     <div class="achievement-item">
                         <div class="achievement-block">
                             <span class="achievement-text-title">إحباط وضبط أكبر عمليات التهريب</span>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">الاشتباك مع مجموعات المهربين بحزم وإحباط إدخل المواد والمركبات غير النظامية للمدينة عبر الخطوط السريعة بكل كفاءة.</p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">الاشتباك مع مجموعات المهربين بحزم وإحباط إدخال المواد والمركبات غير النظامية للمدينة عبر الخطوط السريعة بكل كفاءة.</p>
                         </div>
                     </div>
 
