@@ -339,6 +339,61 @@
             font-size: 1.1rem; 
             margin-bottom: 5px;
         }
+
+        /* تنسيق البنر السفلي المضاف حديثاً */
+        .bottom-hero-banner {
+            /* استبدل road_security.jpg برابط أو مسار الصورة المباشر بعد قص الأطراف الزائدة */
+            background-image: url('road_security.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 380px; 
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-end; /* لتركيز النص بالأسفل لعدم تغطية السيارات */
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            margin-top: 40px;
+            animation: sectionFadeIn 1.2s ease-out;
+        }
+
+        .bottom-banner-overlay {
+            background: linear-gradient(to top, rgba(5, 8, 6, 0.9) 0%, rgba(5, 8, 6, 0.3) 60%, rgba(0,0,0,0) 100%);
+            width: 100%;
+            padding: 35px;
+            color: #fff;
+            text-align: right;
+        }
+
+        .bottom-banner-overlay h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+        }
+
+        .bottom-banner-overlay p {
+            font-size: 1.1rem;
+            color: var(--accent-green);
+            font-weight: 650;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+        }
+
+        @media (max-width: 768px) {
+            .bottom-hero-banner {
+                height: 230px;
+            }
+            .bottom-banner-overlay h2 {
+                font-size: 1.4rem;
+            }
+            .bottom-banner-overlay p {
+                font-size: 0.95rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -425,7 +480,7 @@
                     
                     <div style="margin-bottom: 15px;">
                         <h4 class="system-sub-title">1. إتمام المخالفة</h4>
-                        <p class="system-desc">يجب رصد المخالفة وإتمامها وتصويرها بالكامل قبل وضعها في قنوات شات القوات الخاصة لأمن الطرق.</p>
+                        <p class="system-desc">يجب رصد المخالفة وإتمامها وتصويرها بالكامل قبل وضعها in قنوات شات القوات الخاصة لأمن الطرق.</p>
                     </div>
                     
                     <div style="margin-bottom: 15px;">
@@ -582,6 +637,13 @@
                 </div>
             </div>
         </section>
+
+        <div class="bottom-hero-banner">
+            <div class="bottom-banner-overlay">
+                <h2>العيون الساهرة في الميدان</h2>
+                <p>انضباط، جاهزية، وردع لكل مخلّ بالأمن على الطرقات الحيوية.</p>
+            </div>
+        </div>
 
     </div>
 
